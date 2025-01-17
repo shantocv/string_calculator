@@ -4,9 +4,18 @@
 # It supports user-defined delimiters and handles edge cases like empty strings.
 class StringCalculator
   def self.add(input)
-    0 if input.empty?
+    return 0 if input.empty?
 
-    numbers = input.split(',').map(&:to_i)
+    numbers = split_by(input).map(&:to_i)
     numbers.sum
+  end
+
+  # Replace newlines with commas and split by delimiter
+  def self.split_by(input)
+    input.gsub("\n", delimiter).split(delimiter)
+  end
+
+  def self.delimiter
+    ','
   end
 end
