@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-01-17T18:03:57+05:30">2025-01-17T18:03:57+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-01-17T19:22:44+05:30">2025-01-17T19:22:44+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,7 +29,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.14
+         2.0
        </span>
     </span> hits/line
     )
@@ -42,8 +42,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>22</b> relevant lines,
-    <span class="green"><b>22</b> lines covered</span> and
+    <b>29</b> relevant lines,
+    <span class="green"><b>29</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -72,20 +72,20 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ddff68802293846c9d0cc00a621075a851a56d47" class="src_link" title="lib/string_calculator.rb">lib/string_calculator.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.78</td>
+            <td class="cell--number">3.42</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#866dd290fd4637d68fa02797bfd580cac0d4af5e" class="src_link" title="spec/string_calculator_spec.rb">spec/string_calculator_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">13</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -122,8 +122,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -199,14 +199,14 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="7">
+          <li class="covered" data-hits="7" data-linenumber="7">
             
-              <span class="hits">5</span>
-            
-
+              <span class="hits">7</span>
             
 
-            <code class="ruby">    0 if input.empty?</code>
+            
+
+            <code class="ruby">    return 0 if input.empty?</code>
           </li>
         </div>
       
@@ -221,26 +221,26 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="9">
+          <li class="covered" data-hits="6" data-linenumber="9">
             
-              <span class="hits">5</span>
-            
-
+              <span class="hits">6</span>
             
 
-            <code class="ruby">    numbers = split_by(input).map(&amp;:to_i)</code>
+            
+
+            <code class="ruby">    delimiter = extract_delimiter(input)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="10">
+          <li class="covered" data-hits="6" data-linenumber="10">
             
-              <span class="hits">5</span>
-            
-
+              <span class="hits">6</span>
             
 
-            <code class="ruby">    numbers.sum</code>
+            
+
+            <code class="ruby">    extract_numbers(input, delimiter).sum</code>
           </li>
         </div>
       
@@ -265,12 +265,14 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="13">
+            
+              <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  # Replace newlines with commas and split by delimiter</code>
+            <code class="ruby">  class &lt;&lt; self</code>
           </li>
         </div>
       
@@ -282,34 +284,12 @@
 
             
 
-            <code class="ruby">  def self.split_by(input)</code>
+            <code class="ruby">    private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="15">
-            
-              <span class="hits">5</span>
-            
-
-            
-
-            <code class="ruby">    input.gsub(&quot;\n&quot;, delimiter).split(delimiter)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="15">
             
 
             
@@ -319,26 +299,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="16">
+            
+
+            
+
+            <code class="ruby">    # Replace newlines with commas and split by delimiter</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
             
               <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def self.delimiter</code>
+            <code class="ruby">    def extract_numbers(input, delimiter)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="19">
+          <li class="covered" data-hits="6" data-linenumber="18">
             
-              <span class="hits">10</span>
+              <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      input.gsub(&quot;\n&quot;, delimiter).split(delimiter).map(&amp;:to_i)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
             
 
             
 
-            <code class="ruby">    &#39;,&#39;</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -348,12 +348,78 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def extract_delimiter(input)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="22">
+            
+              <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      return input[2] if input.start_with?(&#39;//&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="24">
+            
+              <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">      &#39;,&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="27">
             
 
             
@@ -381,8 +447,8 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -675,12 +741,100 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the sum when the delimiter is a semicolon&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(described_class.add(&quot;//;\n1;2&quot;)).to eq(3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="31">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the sum when the delimiter is a custom character&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="32">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(described_class.add(&quot;//|\n1|2|3&quot;)).to eq(6)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="35">
             
 
             

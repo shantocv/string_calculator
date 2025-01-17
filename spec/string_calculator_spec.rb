@@ -23,5 +23,13 @@ RSpec.describe StringCalculator do
     it 'returns the sum of numbers with newlines between them' do
       expect(described_class.add("1\n2,3")).to eq(6)
     end
+
+    it 'returns the sum when the delimiter is a semicolon' do
+      expect(described_class.add("//;\n1;2")).to eq(3)
+    end
+
+    it 'returns the sum when the delimiter is a custom character' do
+      expect(described_class.add("//|\n1|2|3")).to eq(6)
+    end
   end
 end

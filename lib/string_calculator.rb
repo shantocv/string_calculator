@@ -6,16 +6,22 @@ class StringCalculator
   def self.add(input)
     return 0 if input.empty?
 
-    numbers = split_by(input).map(&:to_i)
-    numbers.sum
+    delimiter = extract_delimiter(input)
+    extract_numbers(input, delimiter).sum
   end
 
-  # Replace newlines with commas and split by delimiter
-  def self.split_by(input)
-    input.gsub("\n", delimiter).split(delimiter)
-  end
+  class << self
+    private
 
-  def self.delimiter
-    ','
+    # Replace newlines with commas and split by delimiter
+    def extract_numbers(input, delimiter)
+      input.gsub("\n", delimiter).split(delimiter).map(&:to_i)
+    end
+
+    def extract_delimiter(input)
+      return input[2] if input.start_with?('//')
+
+      ','
+    end
   end
 end
