@@ -7,13 +7,15 @@ class StringCalculator
     return 0 if input.empty?
 
     delimiter = extract_delimiter(input)
-    extract_numbers(input, delimiter).sum
+    numbers = extract_numbers(input, delimiter)
+    validate_no_negatives(numbers)
+
+    numbers.sum
   end
 
   class << self
     private
 
-    # Replace newlines with commas and split by delimiter
     def extract_numbers(input, delimiter)
       input.gsub("\n", delimiter).split(delimiter).map(&:to_i)
     end
@@ -22,6 +24,15 @@ class StringCalculator
       return input[2] if input.start_with?('//')
 
       ','
+    end
+
+    def negative_numbers(numbers)
+      numbers.select(&:negative?)
+    end
+
+    def validate_no_negatives(numbers)
+      negatives = negative_numbers(numbers)
+      raise "negative numbers not allowed: #{negatives.join(', ')}" unless negatives.empty?
     end
   end
 end
