@@ -6,6 +6,7 @@ class StringCalculator
   def self.add(input)
     0 if input.empty?
 
-    # Further implementation goes here
+    numbers = input.split(',').map(&:to_i)
+    numbers.sum
   end
 end

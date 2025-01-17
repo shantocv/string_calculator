@@ -3,10 +3,24 @@
     "coverage": {
       "/Users/shantocv/study/string_calculator/spec/string_calculator_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -16,16 +30,21 @@
       },
       "/Users/shantocv/study/string_calculator/lib/string_calculator.rb": {
         "lines": [
-          1,
-          1,
-          1,
           null,
           null,
+          null,
+          null,
+          1,
+          1,
+          4,
+          null,
+          4,
+          4,
           null,
           null
         ]
       }
     },
-    "timestamp": 1737113608
+    "timestamp": 1737114595
   }
 }

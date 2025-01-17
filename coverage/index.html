@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-01-17T17:03:28+05:30">2025-01-17T17:03:28+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-01-17T17:19:55+05:30">2025-01-17T17:19:55+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -28,8 +28,8 @@
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         1.56
        </span>
     </span> hits/line
     )
@@ -42,8 +42,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>8</b> relevant lines,
-    <span class="green"><b>8</b> lines covered</span> and
+    <b>16</b> relevant lines,
+    <span class="green"><b>16</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -72,20 +72,20 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ddff68802293846c9d0cc00a621075a851a56d47" class="src_link" title="lib/string_calculator.rb">lib/string_calculator.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">2.80</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#866dd290fd4637d68fa02797bfd580cac0d4af5e" class="src_link" title="spec/string_calculator_spec.rb">spec/string_calculator_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -122,8 +122,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -135,7 +135,47 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
+          <li class="never" data-hits="" data-linenumber="1">
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+
+            
+
+            <code class="ruby"># StringCalculator is a utility class that performs addition of numbers from a string input.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+
+            
+
+            <code class="ruby"># It supports user-defined delimiters and handles edge cases like empty strings.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
             
               <span class="hits">1</span>
             
@@ -147,7 +187,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
+          <li class="covered" data-hits="1" data-linenumber="6">
             
               <span class="hits">1</span>
             
@@ -159,19 +199,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="covered" data-hits="4" data-linenumber="7">
             
-              <span class="hits">1</span>
-            
-
+              <span class="hits">4</span>
             
 
-            <code class="ruby">    return 0 if input.empty?</code>
+            
+
+            <code class="ruby">    0 if input.empty?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="never" data-hits="" data-linenumber="8">
             
 
             
@@ -181,17 +221,31 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="covered" data-hits="4" data-linenumber="9">
+            
+              <span class="hits">4</span>
             
 
             
 
-            <code class="ruby">    # Further implementation goes here</code>
+            <code class="ruby">    numbers = input.split(&#39;,&#39;).map(&amp;:to_i)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="covered" data-hits="4" data-linenumber="10">
+            
+              <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    numbers.sum</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
 
             
@@ -201,7 +255,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="12">
             
 
             
@@ -229,8 +283,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -242,14 +296,12 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
             
 
             
 
-            <code class="ruby">require &#39;string_calculator&#39;</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
@@ -271,19 +323,17 @@
 
             
 
-            <code class="ruby">RSpec.describe StringCalculator do</code>
+            <code class="ruby">require &#39;string_calculator&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
             
 
             
 
-            <code class="ruby">  describe &#39;.add&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -295,7 +345,7 @@
 
             
 
-            <code class="ruby">    it &#39;returns 0 for an empty string&#39; do</code>
+            <code class="ruby">RSpec.describe StringCalculator do</code>
           </li>
         </div>
       
@@ -307,12 +357,36 @@
 
             
 
-            <code class="ruby">      expect(StringCalculator.add(&#39;&#39;)).to eq(0)</code>
+            <code class="ruby">  describe &#39;.add&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="7">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns 0 for an empty string&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(described_class.add(&#39;&#39;)).to eq(0)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
             
 
             
@@ -322,7 +396,139 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="10">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the number itself if the input contains a single number&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(StringCalculator.add(&#39;5&#39;)).to eq(5)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the sum of two comma-separated numbers&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(StringCalculator.add(&#39;1,2&#39;)).to eq(3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the sum of multiple comma-separated numbers&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(StringCalculator.add(&#39;1,2,3,4&#39;)).to eq(10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
             
 
             
@@ -332,7 +538,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="23">
             
 
             
