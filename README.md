@@ -6,6 +6,9 @@ A simple string calculator implementation in Ruby. This project is built using T
 ## Features
 
 - **Addition of numbers from a string**: The calculator can sum numbers provided as a comma-separated string.
+- **Custom delimiters**: Supports user-defined delimiters in the format `//[delimiter]
+[numbers...]`.
+- **Error handling**: Throws an exception when negative numbers are provided, listing all negative numbers in the error message.
 
 ## Installation
 
@@ -29,13 +32,11 @@ A simple string calculator implementation in Ruby. This project is built using T
 The `StringCalculator` class provides the `add` method to sum numbers from a string.
 
 ```ruby
-calculator = StringCalculator.new
-
 # Adding numbers from a string
-puts calculator.add('') # => 0
-
-# Adding numbers from a string
-puts calculator.add('1,2,3') # => 6
+puts StringCalculator.add('')         # => 0
+puts StringCalculator.add('1,2,3')    # => 6
+puts StringCalculator.add('1\n2,3')   # => 6 (Handles newlines as well)
+puts StringCalculator.add('//;\n1;2') # => 3 (Supports custom delimiters)
 ```
 
 ### Running Tests
@@ -67,6 +68,8 @@ To view the report:
    xdg-open coverage/index.html  # On Linux
    start coverage/index.html  # On Windows
    ```
+
+   ![simple coverage screenshot](assets/simple_coverage.png)
 
 ## RuboCop
 
