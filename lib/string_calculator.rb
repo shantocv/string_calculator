@@ -2,7 +2,7 @@
 
 # StringCalculator is a utility class that performs addition of numbers from a string input.
 # It supports user-defined delimiters and handles edge cases like empty strings.
-class StringCalculator
+module StringCalculator
   def self.add(input)
     return 0 if input.empty?
 
